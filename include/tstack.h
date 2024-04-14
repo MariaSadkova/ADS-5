@@ -34,3 +34,4 @@ class TStack {
             return false;
     }
 };
+#endif // INCLUDE_TSTACK_H_
