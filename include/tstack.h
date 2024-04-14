@@ -12,7 +12,7 @@ int t;
 TStack() : t(-1) {}
 void pup(T value) {
   if (!isFull())
-    data[++top] = value;
+    data[++t] = value;
   else
   throw std::string("Full stack");
 }
