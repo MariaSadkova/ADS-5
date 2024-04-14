@@ -23,10 +23,10 @@ class TStack {
         return data[m--];
     }
     T see() {
-      if (m > 0)
-        return data[m - 1];
-      else
-        return -1;
+     if (m > 0)
+      return data[m - 1];
+     else
+      return -1;
     }
     bool isOverflow() const {
       return m == size - 1;
