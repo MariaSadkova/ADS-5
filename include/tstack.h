@@ -6,31 +6,31 @@ template<typename T, int size>
 class TStack {
  private:
 T data[100];
-int t;
+int m;
 
  public:
-TStack() : t(-1) {}
+TStack() : m(-1) {}
 void pup(T value) {
   if (!isFull())
-    data[++t] = value;
+    data[++m] = value;
   else
   throw std::string("Full stack");
 }
 T pip() const {
-  return data[t];
+  return data[m];
 }
 T pap() {
   if (isEmpty()) {
     throw std::string("Empty stack");
   } else {
-    return data[t--];
+    return data[m--];
   }
 }
 bool isEmpty() const {
-  return t == -1;
+  return m == -1;
 }
 bool isFull() const {
-  return t == size - 1;
+  return m == size - 1;
 }
 };
 
