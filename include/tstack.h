@@ -17,7 +17,7 @@ class TStack {
         throw std::string("Fall stack");
     }
     T pop() {
-      if (isEmptyy())
+      if (isEmpty())
         throw std::string("Empty stack");
       else
         return data[m--];
@@ -25,7 +25,7 @@ class TStack {
     bool isOverflow() const {
       return m == size - 1;
     }
-    bool isEmptyy() const {
+    bool isEmpty() const {
       return m == -1;
     }
 };
