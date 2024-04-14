@@ -21,7 +21,7 @@ std::string infx2pstfx(std::string inf) {
         } else if (t == '(') {
             stack.push(t);
         } else if (t == '+' || t == '-' || t == '*' || t == '/') {
-            while (!stack.isEmpty() && perv(stack.see()) >= perv(inf[t])) {
+            while (!stack.isEmpty() && perv(stack.see()) >= perv(t)) {
                 post = post + stack.see() + ' ';
                 stack.pop();
             }
