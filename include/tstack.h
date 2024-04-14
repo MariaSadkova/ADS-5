@@ -10,17 +10,17 @@ class TStack {
     int m;
  public:
     TStack(): m(-1) {}
-    void pushh(T vl) {
+    void push(T vl) {
       if (!isOverflow())
-        arr[++m] = vl;
+        data[++m] = vl;
       else
         throw std::string("Fall stack");
     }
-    T popp() {
+    T pop() {
       if (isEmptyy())
         throw std::string("Empty stack");
       else
-        return arr[m--];
+        return data[m--];
     }
     bool isOverflow() const {
       return m == size - 1;
